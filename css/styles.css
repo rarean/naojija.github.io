@@ -21,8 +21,8 @@ footer {
 
 .jumbotron {
     padding: 30px;
-    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
-    color: white;
+    background-image: linear-gradient(to right, rgb(155, 55, 221), rgb(48, 95, 197), rgb(100, 16, 107));
+    color: green;
 }
 
 .row-content {
