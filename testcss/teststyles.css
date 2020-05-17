@@ -1,0 +1,43 @@
+/* You do not need to change anything in this CSS section. */
+
+.row div {
+    /*border: solid lightgreen;*/
+  }
+  
+  #viewport-size {
+    background: green;
+    padding: 5px;
+  }
+  
+  body {
+      font-family: "Open Sans", sans-serif;
+  }
+  
+  h1, h2, h3 {
+      font-family: "Lobster", cursive;
+  }
+  
+  h2 {
+      color: #3046C5;
+  }
+  
+  header h2 {
+      color: #CEC8FF;
+  }
+  
+  footer {
+      background-image: linear-gradient(#CEC8FF, white);
+      padding: 20px 0;
+  }
+  
+  .jumbotron {
+      padding: 30px;
+      background-image: linear-gradient(to right, rgb(155, 55, 221), rgb(48, 95, 197), rgb(100, 16, 107));
+      color: white;
+  }
+  
+  .row-content {
+      padding: 50px 0;
+      border-bottom: 1px ridge;
+      min-height: 190px;
+  }
