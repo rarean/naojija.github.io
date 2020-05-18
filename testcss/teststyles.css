@@ -1,8 +1,9 @@
 /* You do not need to change anything in this CSS section. */
 
-.row div {
-    /*border: solid lightgreen;*/
+/*.row div {
+    border: solid lightgreen;
   }
+*/
   
   #viewport-size {
     background: green;
@@ -31,13 +32,18 @@
   }
   
   .jumbotron {
-      padding: 30px;
-      background-image: linear-gradient(to right, rgb(155, 55, 221), rgb(48, 95, 197), rgb(100, 16, 107));
-      color: white;
+    margin: 0;
+    padding: 30px;
+    background-image: linear-gradient(to right, rgb(55, 80, 221), rgb(48, 95, 197), rgb(56, 16, 107));
+    color: white;
   }
-  
-  .row-content {
-      padding: 50px 0;
-      border-bottom: 1px ridge;
-      min-height: 190px;
+
+    .row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 190px;
+  }
+
+  .navbar {
+    background-color: rgb(155, 55, 221);
   }
