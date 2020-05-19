@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    
+        <!-- Additional CSS must be placed after Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+        <link rel="stylesheet" href="css/styles.css" />
+    
+        <title>Bootstrap Table Demo</title>
+    </head>
+<body>
+    <header class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1>Bootstrap</h1>
+              <h2>Table Demo</h2>
+              <p>Resize this responsive page to see the effect!</p> 
+              <p>This viewport size is currently: <span id="viewport-size"></span> <span id="breakpointName"></span></p>
+              <p>Breakpoints: Extra small (default) is &lt; 576 (and up); Small (SM) is ≥ 576px; Medium (MD) is ≥ 768px; Large                  (LG) is ≥ 992px; Extra Large (XL) is ≥ 1200px.</p>
+              <br />
+            </div>
+          </div>
+        </div>       
+    </header>
+    <!--Color, spacing & padding Demo-->
+    <!--ml-3 margin from left to right 3 means 1 rem=16px, pl-md-3 for >=MD padding left by 3 = 1rem-->
+    <div class="bg-success text-white ml-3 mr-3 pl-md-3">Spacing and Color Utility classes Demo</div>
+    <!--card-->
+    <div class="containier">
+        <div class="row">
+            <div class="col-6">
+                <div class="card border-info">
+                    <h3 class="card-header bg-info text-light">
+                        Happy Mother's Day
+                    </h3>
+                    <div class="card-body">
+                        Enate Toleshi, wish you happy mother's day and you're wonderful mom
+                        and amazing person in my life. God bless you with
+                        longer happy life. Wish you all the best! From your son Gute
+                        and also represeneting all my brothers and sisters to 
+                        provide this good wish to you! Love you mom! May 18/2020
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!--<thead></thead> tag for the head row -first row with colNames-->
+    <!--<tbody></tbody> tag for body of table-->
+    <!--use th for the first td of the body and th for all tds in first row-->
+    <!--Add bootstrap class="table" to table-->
+    <!--<div clas="table-responsive"> horizontal scroll option when <SM -- bad design to make client/scustomer scroll to see content-->
+        <table class="table table-light table-striped table-bordered table-md">
+            <thead class="table-dark text-primary">
+                <tr>
+                    <th>
+                        Breakpoint
+                    </th>
+                    <th>
+                        Extra Small
+                    </th>
+                    <th>
+                        Small
+                    </th>
+                    <th>
+                        Medium
+                    </th>
+                    <th>
+                        Large
+                    </th>
+                    <th>
+                        Extra Large
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="text-primary">
+                        viewport Width
+                    </th>
+                    <td>
+                        &lt;576px
+                    </td>
+                    <td>
+                        &ge;576px
+                    </td>
+                    <td>
+                        &ge;768px
+                    </td>
+                    <td>
+                        &ge;992px
+                    </td>
+                    <td>
+                        &ge;1200px
+                    </td>
+                </tr>
+                <tr>
+                    <th class="text-primary">
+                        Column Class Prefix
+                    </th>
+                    <td>
+                        .col
+                    </td>
+                    <td>
+                        .col-sm
+                    </td>
+                    <td>
+                        .col-md
+                    </td>
+                    <td>
+                        .col-lg
+                    </td>
+                    <td>
+                        .col-xl
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <!--/div -->
+
+    <!--custom java script-->
+    <script src="testjs/testjs.js"></script>
+    <!--
+    jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    -->
+    
+</body>
+</html>
