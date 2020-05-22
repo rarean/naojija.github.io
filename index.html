@@ -21,13 +21,20 @@
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
+                <!--below div for <a href="#"><img src="img/logo.png" "img-fluid" /></a>-->
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <img src="img/logo.png" class="img-fluid" />
+                   <a href="#"><img src="img/logo.png" class="img-fluid"/></a>
                  </div>
                 <div class="col">
                     <h1>Nucamp</h1>
                     <h2>A better way to camp!</h2>
                 </div>
+
+                <div class="col-md-4 col-sm-2">
+                    <a href="#reserveForm">
+                     <button class="btn mt-3 btn-info p-2 btn-lg" type="button">Reserve Campsite</button>
+                    </a>
+                    </div>                
             </div>
         </div>
     </header>
@@ -37,6 +44,8 @@
     <!--After adding logo, we don't need  ml-auto in button tag as logo take cares the left margin-->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> 
         <div class="container">
+            <!--Add smaller logo to the navbar with with a tag class="navbar-brand-->
+            <!--<a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>-->
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -57,6 +66,10 @@
                 <h2 class="text-sm-right">Discover & Review</h2>
             </div>
             <div class="col">
+                <!--put content of this col within class="media" div-->
+                <!--<img class="d-flex" to deal with bug in IE10/11-->
+                <!--img-thumbnail to give round corner to the image, src="imgLoc"-->
+                <!--class="media-body" put the text context next to the pic -->
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
                     <div class="media-body align-self-center">
@@ -71,9 +84,14 @@
                 <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-               </div>
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                     </div>
+                     <img class="d-flex ml-3 img-thumbnail img-fluid" src="img/react-lake-thumb.jpg" alt="React Lake" />
+                </div>
+            </div>
         </div>
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
@@ -104,6 +122,42 @@
             <h3>Bootstrap Outfitters</h3>
             <p class="d-none d-sm-block">Bootstrap Outfitters supplies you gear you need at prices you can't beat.</p>
         </div> 
+        <div class="row row-content align-items-center">
+            <div class="col-sm-6 mx-auto">
+                 <div class="card border-info">
+                     <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                         <div class="card-body">
+                             <form id="reserveForm">
+                                 <div class="form-group row">
+                                     <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                                     <div class="col">
+                                         <select name="numCampers" id="numCampers" class="form-control">
+                                             <option selected>Select...</option>
+                                             <option value=1>1</option>
+                                             <option value=2>2</option>
+                                             <option value=3>3</option>
+                                             <option value=4>4</option>
+                                             <option value=5>5</option>
+                                             <option value=6>6</option>
+                                         </select>
+                                     </div>
+                                 </div>
+                                 <div class="form-group row">
+                                     <label for="date" class="col-sm-6 col-form-label">Date</label>
+                                     <div class="col">
+                                         <input type="date" name="date" class="form-control" id="date" placeholder="Date"/>
+                                     </div>
+                                 </div>
+                                 <div class="form-group row">
+                                     <div class="col">
+                                         <button type="submit" class="btn btn-primary">Reserve</button>
+                                     </div>
+                                 </div>
+                             </form>
+                         </div>
+                 </div>
+            </div>
+        </div>
     </div>
     <footer class="site-footer">
         <div class="container">
