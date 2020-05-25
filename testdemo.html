@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
         <link rel="stylesheet" href="css/styles.css" />
     
+
         <title>Bootstrap Table Demo</title>
     </head>
 <body>
@@ -27,6 +28,12 @@
               <p>This viewport size is currently: <span id="viewport-size"></span> <span id="breakpointName"></span></p>
               <p>Breakpoints: Extra small (default) is &lt; 576 (and up); Small (SM) is ≥ 576px; Medium (MD) is ≥ 768px; Large                  (LG) is ≥ 992px; Extra Large (XL) is ≥ 1200px.</p>
               <br />
+            </div>
+            <div class="col">
+                <p>tooltip position.</p>
+                <ul class="list-inline">
+                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>                    
+                </ul>
             </div>
           </div>
         </div>       
@@ -266,6 +273,16 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     -->
+        <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     
+        <!--Initialize tooltips for better performance-->
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>  
 </body>
 </html>
