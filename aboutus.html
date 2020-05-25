@@ -106,35 +106,59 @@
         <div class="row row-content">
             <div class="col">
                 <h3>Community Partners</h3>
-                <!--unorder list with list item for each community partners-->
-                <!--add nav base class and nav-table to <ul...-->
-                <!--add nav-item class to each list item-->
-                <!--enclose each item within <a tag which has nav-link class, role="tab" href="#bootstrap" data-toggle="tab"-->
-                <!--set the first list item active-->
-                <ul class="nav nav-tabs">
-                    <li class="nav-item"><a class="nav-link active" href="#bootstrap" role="tab" data-toggle="tab">Bootstrap Outfitters</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#git" role="tab" data-toggle="tab">Git Out Expeditions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mongo" role="tab" data-toggle="tab">Mongo Fly Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#node" role="tab" data-toggle="tab">Node Outdoor Apparel</a></li>
-                </ul>
-                <!--Add the content to <div class="tab-content">-->
-                <!--Enclose each community partner content in different <div role="tabpannel class="tab-pane show active for 1st list item with id="#bootstrap"-->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade show active" id="bootstrap">
-                        <h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
-                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                <!--add <div id="accordion"> container of all tab contents-->
+                <!--put each community partner in a class="card" div-->
+                <!--<div role="tab" class="card-header" contains the h4 element(which <a> enclosing its content) 
+                & <div class="collapse" id="relatedCommunityPartnerId" data-parent="#accordion" and 
+                this div contains the card-body div with p element-->
+                <div id="accordion">
+                    <div class="card">
+                        <div role= "tab" class="card-header">
+                            <h4>
+                                <a data-toggle="collapse" data-target="#bootstrap">Bootstrap Outfitters <small>Outdoor Gear Specialists</small></a>
+                            </h4>
+                            <div class="collapse show" id="bootstrap" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="git">
-                        <h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
-                        <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                    <div class="card">
+                        <div role= "tab" class="card-header">
+                            <h4>
+                                <a data-toggle="collapse" data-target="#git">Git Out Expeditions <small>Group Adventure Expeditions</small></a>
+                            </h4>
+                            <div class="collapse" id="git" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                                </div>
+                            </div>
+                        </div>                     
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="mongo">
-                        <h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></h4>
-                        <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
+                    <div class="card">
+                        <div role= "tab" class="card-header">
+                            <h4>
+                                <a data-toggle="collapse" data-target="#mongo">Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></a>
+                            </h4>
+                            <div class="collapse" id="mongo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="node">
-                        <h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
-                        <p  class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                    <div class="card">
+                        <div role= "tab" class="card-header">
+                            <h4>
+                                <a data-toggle="collapse" data-target="#node">Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></a>
+                            </h4>
+                            <div class="collapse" id="node" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p  class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
              </div>
@@ -193,7 +217,7 @@
                 </div>
                 <div class="col-6 col-sm-5 text-center">
                     <h5>Social</h5>
-                    <!--Add bootraap social classes to improve appearance of social links-->
+                    <!--Add bootstrap social classes to improve appearance of social links-->
                     <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
                     <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
                     <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
