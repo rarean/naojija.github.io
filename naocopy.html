@@ -1,0 +1,53 @@
+<!--This row row-content div was for the reserveForm which is replaced by modal-->
+<div class="row row-content align-items-center">
+    <div class="col-sm-6 mx-auto">
+        <div class="card border-info">
+            <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+            <div class="card-body">  
+                <!--Remove id="reserveFrom from <form> as the form rows it refers to replaced by modal-->
+                <form id="reserveForm">
+                    <div class="form-group row">
+                        <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                        <div class="col">
+                            <select name="numCampers" id="numCampers" class="form-control">
+                                <option selected>Select...</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+                                <option value=5>5</option>
+                                <option value=6>6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!---this form-group row is for #reserveCampsite button to work, it is now replaced by modal, remove the id: -->
+                    <div class="form-group row">
+                        <label for="date" class="col-sm-6 col-form-label">Date</label>
+                        <div class="col-sm-6">
+                            <input type="date" name="date" id="date" class="form-control" placeholder="Date">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--tooltip from jumbotron-->
+<div class="col-md-4 col-xl-2 mt-4">
+    <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-206-1234</strong>">Reserve Campsite</a>
+</div> 
+
+<!---tooltip replaced by modal-->
+    <!--Initialize tooltips for better performance-->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
