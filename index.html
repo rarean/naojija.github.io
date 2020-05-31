@@ -63,20 +63,23 @@
                             </div>
                             <div class="form-group row">
                                 <label for="date" class="col-sm-6 col-form-label">Date</label>
-                                <div class="col-sm-6">
+                                <div class="col-sm-3">
                                     <input type="date" name="date" id="date" class="form-control" placeholder="Date">
+                                </div>
+                                <div class="col-sm-3">
+                                    <input type="time" name="time" id="date" class="form-control" placeholder="Time">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-6 col-form-label">Reserve Type</label>
                                 <div class="col">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-success active">
-                                            <input type="radio" name="reserveType" id="siteTent" >Partial
-                                        </label>
-                                        <label class="btn btn-primary">
-                                            <input type="radio" name="reserveType" id="siteRV">Entire
-                                        </label>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="siteTent" name="reserveType" value="Partial">
+                                        <label for="siteTent" class="form-check-label">Partial</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" id="siteRV" name="reserveType" value="Entire">
+                                        <label for="siteRV" class="form-check-label">Entire</label>
                                     </div>
                                 </div>
                             </div>
@@ -173,7 +176,7 @@
                 <!--carousel-inner div contains all the carousel elements to be shown on slides-->
                 <!--w-100 to make sure the image will not take-over the while width-->
                 <!--.carousel-caption {background-color: rgba(0, 0, 0, 0.5); gives light=dark background to carousel-->
-                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                <div id="homeCarousel" class="carousel slide" data-ride="carousel" data-interval=3000>
                     <!--Add carousel indicators above the carousel-inner container with <ol ..li-->
                     <ol class="carousel-indicators">
                         <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
@@ -236,7 +239,12 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div>
+                    <!--carousel with pause & play
+                    ref: http://www.java2s.com/Tutorials/HTML_CSS/Bootstrap_Example/Carousel/Create_Carousel_with_Pause_and_Play.htm-->
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <i class="fa fa-pause"></i>
+                    </button>
+                 </div>
             </div>
         </div>
         <div class="row row-content">
@@ -365,5 +373,26 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--jQuery pause & play, default interval is 5000(5sec)
+    $ indicates starts of jQuery, 
+    $(document).ready(function()){} can be use but the below one is shorthand form of the same and recommened
+    this jQuery ready function/method specifies a function to load when the webpage's DOM is ready: -->
+    <script>
+        $(function() {
+            $(".carousel").carousel( { interval: 2000 } );
+            $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                    $(".carousel").carousel("pause");
+                    $("#carouselButton").children("i").removeClass("fa-pause");
+                    $("#carouselButton").children("i").addClass("fa-play");
+                } else {
+                    $(".carousel").carousel("cycle");
+                    $("#carouselButton").children("i").removeClass("fa-play");
+                    $("#carouselButton").children("i").addClass("fa-pause"); 
+                }
+            });
+        });
+    </script>
 </body>
 </html>
