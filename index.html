@@ -31,7 +31,9 @@
                     <h2>Enjoy Delicious Ethiopian Dishes</h2>
                 </div>
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Awash Cuisine</a>
+                    <!--a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Awash Cuisine</a-->
+                    <!--replace data-toggle="modal" data-target="#reserveModal" with id="reserveButton"-->
+                    <a role="button" class="btn btn-lg btn-info" id="reserveButton">Reserve Awash Cuisine</a>
                 </div>                
             </div>
         </div>
@@ -41,7 +43,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title bg-info text-white">Reserve Awash Cuisine</h3>
+                    <h3 class="modal-title">Reserve Awash Cuisine</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -84,9 +86,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary btn-sm">Reserve</button>
+                            <div class="form-row row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary btn-sm">Reserve</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -115,8 +119,9 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i>Contact</a></li>
                 </ul>  
                 <!--Add login button with modal pop up to be filled-->
+                <!--Replace data-toggle="modal" data-target="#loginModal" with id="loginButton"-->
                 <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                    <a role="button" id="loginButton">
                         <i class="fa fa-sign-in"></i>Login
                     </a>
                 </span>
@@ -141,7 +146,7 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form>
-                            <div class="form-row">
+                            <div class="form-row row">
                                 <!--sr-only: Hides an element to all devices except screen readers-->
                                 <div class="form-group col-12">
                                     <label class="sr-only" for="loginEmail">Email address</label>
@@ -160,9 +165,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary btn-sm ml-1"> Sign in</button>
+                            <div class="form-row row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary btn-sm">Sign in</button>
+                                </div>
                             </div>
                         </form>
                     </div>
