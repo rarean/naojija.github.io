@@ -32,7 +32,7 @@
             <div class="row">
                 <!--below div for <a href="#"><img src="img/logo.png" "img-fluid" /></a>-->
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                   <a href="#"><img src="img/logo.png" class="img-fluid"/></a>
+                   <a href="#"><img alt="logo" src="img/logo.png" class="img-fluid"/></a>
                  </div>
                 <div class="col">
                     <h1>Nucamp</h1>
@@ -50,13 +50,15 @@
     <div id="reserveModal" class="modal fade" role="dialog">        
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title bg-info text-white">Reserve a Campsite</h3>
+              <!--add bg-info to modal-header -->
+                <div class="modal-header bg-info">
+                    <h3 class="modal-title text-white">Reserve a Campsite</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form>
+                      <!--add missing id -->
+                        <form id="reserveForm">
                             <div class="form-group row">
                                 <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
                                 <div class="col">
@@ -90,9 +92,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <!--add missing class -->
+                            <div class="form-row row">
+                              <!--add missing div & col class -->
+                              <div class="col">
                                 <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
                                 <button type="button" class="btn btn-primary btn-sm"> Search</button>
+                              </div>
                             </div>
                         </form>
                     </div>
@@ -108,7 +114,7 @@
         <div class="container">
             <!--Add smaller logo to the navbar with with a tag class="navbar-brand-->
             <!--<a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>-->
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" height="30" width="30" /></a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button> 
