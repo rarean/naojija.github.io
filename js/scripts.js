@@ -17,4 +17,10 @@ $(function() {
     $("#loginButton").click(function(){
         $("#loginModal").modal("show");
     });
+    $("#cateringButton").click(function(){
+        $("#cateringModal").modal("show");
+    });
+    $("#toGoButton").click(function(){
+        $("#toGoModal").modal("show");
+    });
 });

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <!-- endbuild -->
 
-    <title>NuCamp: A Better Way To Camp</title>
+    <title>Awash Cuisine: A Better Place to Go</title>
 </head>
 <body>
     <!--class="row row-content align-items-center" align single row of items in the center-->
@@ -28,13 +28,23 @@
                  </div>
                 <div class="col">
                     <h1>Awash Cuisine</h1>
-                    <h2>Enjoy Delicious Ethiopian Dishes</h2>
+                    <h2>Enjoy Ethiopian Dishes & Drinks</h2>
                 </div>
-                <div class="col-md-4 col-xl-2 mt-4">
+                <div class="col-md-2 col-xl-2 mt-4">
                     <!--a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Awash Cuisine</a-->
                     <!--replace data-toggle="modal" data-target="#reserveModal" with id="reserveButton"-->
-                    <a role="button" class="btn btn-lg btn-info" id="reserveButton">Reserve Awash Cuisine</a>
-                </div>                
+                    <a role="button" class="btn btn-lg btn-info" id="reserveButton">Reservation</a>
+                </div> 
+                <div class="col-md-2 col-xl-2 mt-4">
+                    <!--a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Awash Cuisine</a-->
+                    <!--replace data-toggle="modal" data-target="#reserveModal" with id="reserveButton"-->
+                    <a role="button" class="btn btn-lg btn-info" id="cateringButton">Catering</a>
+                </div>
+                <div class="col-md-2 col-xl-2 mt-4">
+                    <!--a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Awash Cuisine</a-->
+                    <!--replace data-toggle="modal" data-target="#reserveModal" with id="reserveButton"-->
+                    <a role="button" class="btn btn-lg btn-info" id="toGoButton">ToGo</a>
+                </div>                    
             </div>
         </div>
     </header>
@@ -48,20 +58,19 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <p>call us at <br /><strong>1-206-206-1234</strong> Or complete the below form</p>
+                        <p class="text-info"><strong>Call or Email us to reserve Awash Cuisine</strong></p>
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <a role="button" class="btn btn-link" href="tel:+1206206206"> <i class="fa fa-phone fa-lg text-primary"></i> 1-206-206-206</a> <br />
+                                <a role="button" class="btn btn-link" href="mailto:reservecuisine@awashcuisine.com"> <i class="fa fa-envelope-o fa-lg text-primary"></i> reservecuisine@awashcuisine.com</a> 
+                            </div>
+                        </div>
+                        <p class="text-info"><strong>Or reserve the cuisine by completing the below form</strong></p>
                         <form>
                             <div class="form-group row">
-                                <label for="numCampers" class="col-sm-6 col-form-label">Number of Guests</label>
-                                <div class="col">
-                                    <select name="numCampers" id="numCampers" class="form-control">
-                                        <option selected>Select...</option>
-                                        <option value=1>1</option>
-                                        <option value=2>2</option>
-                                        <option value=3>3</option>
-                                        <option value=4>4</option>
-                                        <option value=5>5</option>
-                                        <option value=6>6</option>
-                                    </select>
+                                <label for="numCampers" class="col-sm-6 col-form-label">Number of Guests (max capacity 30 Guests): </label>
+                                <div class="col-sm-3">
+                                    <input type="text" name="numCampers" id="numCampers" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -98,6 +107,49 @@
             </div>
         </div>
     </div>
+    <div id="cateringModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Catering Service</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <p class="text-info"><strong>Call or Email us for Catering service from Awash Cuisine</strong></p>
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <a role="button" class="btn btn-link" href="tel:+1206206206"> <i class="fa fa-phone fa-lg text-primary"></i> 1-206-206-206</a> <br />
+                                <a role="button" class="btn btn-link" href="mailto:awashcatering@awashcuisine.com"> <i class="fa fa-envelope-o fa-lg text-primary"></i> awashcatering@awashcuisine.com</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toGoModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">ToGo Service</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <p class="text-info"><strong>Call or Email us for ToGo service from Awash Cuisine</strong></p>
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <a role="button" class="btn btn-link" href="tel:+1206206206"> <i class="fa fa-phone fa-lg text-primary"></i> 1-206-206-206</a> <br />
+                                <a role="button" class="btn btn-link" href="mailto:awashtogo@awashcuisine.com"> <i class="fa fa-envelope-o fa-lg text-primary"></i> awashtogo@awashcuisine.com</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Add navbar--> 
     <!--Add bootstrap class to navbar navbar-dark to make navbar to stand out, stikcy-top helps navbar statys at top while scrooling up & down-->
     <!--ml-auto moves the collapse icon to the left, for <SM, navbar items collapsed ot navbar-toggler-icon-->
@@ -267,16 +319,23 @@
                     <div class="card">
                         <div role= "tab" class="card-header">
                             <h4>
-                                <a data-toggle="collapse" data-target="#veggi">Vegitables Entries <small>Variety of veggi entries</small></a>
+                                <a data-toggle="collapse" data-target="#veggi"><strong>Ethiopian Meal & Okra</strong><small> with tasty vegan dishes </small><small><p class="text-info">collapse/expand...</p></small></a>
                             </h4>
-                            <div class="collapse show" id="veggi" data-parent="#accordion">
+                            <div class="collapse show active" id="veggi" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p class="d-none d-sm-block">Vegitable entries include the veggi combo, salads and shiro wat</p>
+                                    <p class="d-none d-sm-block">Awash cuisine is full of flavourful vegan dishes and okra</p>
                                     <div class="media">
-                                        <img class="d-flex mr-3 img-thumbnail" src="img/slide2Better.jpg" height="250" width="250" alt="Coffee ceremony" />
+                                        <img class="d-flex mr-3 img-thumbnail" src="img/meal1.jpg" height="250" width="250" alt="Coffee ceremony" />
                                         <div class="media-body align-self-center">
-                                            <h3>Veggi Combo</h3>
-                                            <p class="d-none d-sm-block"> Berbere Vegetarian Recipes Ethiopian Yellow Split Pea and Butternut Stew Camellia diced onion, garlic, salt, water, butternut squash, carrots, yellow split peas </p>
+                                            <h3>Ethiopian Meal</h3>
+                                            <p class="d-none d-sm-block">Traditionally, a meal is eaten with the help of injera, a spongy sourdough flatbread made of fermented teff, which acts as a scooping utensil instead of spoons and forks. Cabbage and mustard lentils are staples within Ethiopian spreads, with no shortage of bright flavors from turmeric, cumin and chile. </p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <img class="d-flex mr-3 img-thumbnail" src="img/okra.jpg" height="250" width="250" alt="Coffee ceremony" />
+                                        <div class="media-body align-self-center">
+                                            <h3>Groundnut Stew</h3>
+                                            <p class="d-none d-sm-block">Peanut butter and okra flavor and thicken this tasty African stew. You can substitute green beans for the okra, if you like; the consistency of the sauce won't be quite the same, but it will still be thick enough to cling to the chicken.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -286,23 +345,23 @@
                     <div class="card">
                         <div role= "tab" class="card-header">
                             <h4>
-                                <a data-toggle="collapse" data-target="#beef">Beef Entries <small>Delicious and Tasty beef entries</small></a>
+                                <a data-toggle="collapse" data-target="#tibs"><strong>Ethiopian Spiced Lamb Stew & Spiced Beef Stew</strong><small> Delicious & spicy lamb/beef awaze tibs </small><small><p class="text-info">expand/collapse...</p></small></a>
                             </h4>
-                            <div class="collapse" id="beef" data-parent="#accordion">
+                            <div class="collapse" id="tibs" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p class="d-none d-sm-block">checkout the differentt beef entries @awash cuisine -- tibis, kitifo and awash combo are the favorite ones!</p>
+                                    <p class="d-none d-sm-block"> Lamb Stew made with tender, boneless leg of lamb and Beef Stew  made with tender, soft beef</p>
                                     <div class="media">
-                                        <img class="d-flex mr-3 img-thumbnail" src="img/slide4.jpg" height="250" width="250" alt="Tibis" />
+                                        <img class="d-flex mr-3 img-thumbnail" src="img/lamb1.jpg" height="250" width="250" alt="Tibis" />
                                         <div class="media-body align-self-center">
-                                            <h3>Tibis</h3>
-                                            <p class="d-none d-sm-block"> The sauce in this dish gets its kick from berbere, an Ethiopian chili powder fragrant with cardamom, fenugreek, and clove. Use it once and you'll see why a good chunk of Ethiopian cuisine is built on it</p>
+                                            <h3>Ethiopian Spiced Lamb Stew</h3>
+                                            <p class="d-none d-sm-block"> Made with tender, boneless leg of lamb, this quick-cooking staple of Ethiopian home cooking is called awaze tibs and is flavored with awaze sauce, a kicky blend of berbere spices, smoked paprika, lemon juice and wine. Some cooks like it dry, but Hiyaw Gebreyohannes prefers it saucy—all the better for mopping up with Ethiopia's crêpe-like bread, injera.</p>
                                         </div>
                                     </div>
                                     <div class="media">
-                                        <img class="d-flex mr-3 img-thumbnail" src="img/specialkitifo.jpg" height="250" width="250" alt="Kitifo" />
+                                        <img class="d-flex mr-3 img-thumbnail" src="img/tib3.jpg" height="250" width="250" alt="Tibis" />
                                         <div class="media-body align-self-center">
-                                            <h3>Special Kitifo</h3>
-                                            <p class="d-none d-sm-block"> Ethiopian Kitfo Recipes Spicy Ethiopian kitfo recipes could inspire you to eat raw meat more often with its unique blend of African chili peppers and other warming spices. Kitfo is a traditional Ethiopian dish that's made from finely chopped raw meat mixed with clarified butter</p>
+                                            <h3>Ethiopian Spiced Beef Stew</h3>
+                                            <p class="d-none d-sm-block"> Made with tender, soft beef/meat, this quick-cooking staple of Ethiopian home cooking is called awaze tibs and is flavored with awaze sauce, a kicky blend of berbere spices, smoked paprika, lemon juice and wine. Some cooks like it dry, but Hiyaw Gebreyohannes prefers it saucy—all the better for mopping up with Ethiopia's crêpe-like bread, injera.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -312,16 +371,23 @@
                     <div class="card">
                         <div role= "tab" class="card-header">
                             <h4>
-                                <a data-toggle="collapse" data-target="#doro">Chicken Entries <small> Specisy and yammy chicken dishes</small></a>
+                                <a data-toggle="collapse" data-target="#cabbage"><strong>Cabage & Carrots and Lentils</strong><small> Sautéed Cabbage and Carrots with Turmeric and Spiced Red Lentils</small><small><p class="text-info">expand/collapse...</p></small></a>
                             </h4>
-                            <div class="collapse" id="doro" data-parent="#accordion">
+                            <div class="collapse" id="cabbage" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p class="d-none d-sm-block">Specisy and yammy chicken dishes -- this includes the famous Ethiopian Doro Wat!</p>
+                                    <p class="d-none d-sm-block">Spiced vegetarian dish with chunks of carrots and cabbage, and lenthils </P>
                                     <div class="media">
-                                        <img class="d-flex mr-3 img-thumbnail" src="img/dorowat.jpg" height="250" width="250" alt="Doro Wat" />
+                                        <img class="d-flex mr-3 img-thumbnail" src="img/cabage1.jpg" height="250" width="250" alt="Doro Wat" />
                                         <div class="media-body align-self-center">
-                                            <h3>Doro Wat</h3>
-                                            <p class="d-none d-sm-block">Doro wat (Amharic: ዶሮ ወጥ dōrō we̠t’, Tigrinya: ደርሆ ጸብሒ derhō tsebhi), made from chicken and sometimes hard-boiled eggs is the most popular traditional food in Ethiopia</p>
+                                            <h3>Sautéed Cabbage and Carrots with Turmeric</h3>
+                                            <p class="d-none d-sm-block"> Cooking onions until softened, then stirring in spices and aromatics like garlic and ginger is the foundation of many Ethiopian recipes, from vegetables and lentils to meat and chicken. In this delicately spiced vegetarian dish, chunks of carrots and cabbage are added to the base and cooked until the cabbage is sweet and silky. Turmeric, the main seasoning, lends an earthy flavor.</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <img class="d-flex mr-3 img-thumbnail" src="img/lentils.jpg" height="250" width="250" alt="Doro Wat" />
+                                        <div class="media-body align-self-center">
+                                            <h3>Spiced Red Lentils</h3>
+                                            <p class="d-none d-sm-block">The heat in this deeply satisfying red lentil dish—called misir wat in Amharic, the language of Ethiopia—comes mainly from berbere, the ground Ethiopian spice blend that includes chile pepper, cardamom, coriander, ajwain and fenugreek.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -331,7 +397,7 @@
                     <div class="card">
                         <div role= "tab" class="card-header">
                             <h4>
-                                <a data-toggle="collapse" data-target="#drink">Drinks<small> Beverages, coffee and Tee</small></a>
+                                <a data-toggle="collapse" data-target="#drink"><strong>Ethiopian Coffee Cermony</strong><small> Coffee</small><small><p class="text-info">expand/collapse...</p></small></a>
                             </h4>
                             <div class="collapse" id="drink" data-parent="#accordion">
                                 <div class="card-body">
@@ -372,7 +438,7 @@
                 </div>
                 <div class="col-sm-4 text-center">
                     <a role="button" class="btn btn-link" href="tel:+1206206206"> <i class="fa fa-phone fa-lg text-primary"></i> 1-206-206-206</a> <br />
-                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"> <i class="fa fa-envelope-o fa-lg text-primary"></i> campsites@nucamp.co</a> 
+                    <a role="button" class="btn btn-link" href="mailto:cuisine@awashcuisine.com"> <i class="fa fa-envelope-o fa-lg text-primary"></i>cuisine@awashcuisine.com</a> 
                 </div>
            </div>
         </div>
